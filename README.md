@@ -6,7 +6,7 @@ An unofficial REST API for PhpBB with example client.
 * Example client: MIT
 
 ### Preamble
-Project is provided as-is.  It was built to support a particular website and will not see regular updates.  If you want to try to make this an official extension, add new features, or fix integration with future versions of PhpBB, please feel free to clone the repo and do with it as you please.
+Project is provided as-is.  It was built to support a particular website and will not see regular updates.  If you want to try to add this to the PhpBB extension database, add new features, or fix integration with future versions of PhpBB, please feel free to clone the repo and do with it as you please.
 
 ### What this project intended to solve
 * Single sign-on with PhpBB
@@ -20,7 +20,7 @@ Project is provided as-is.  It was built to support a particular website and wil
   * It doesn't alter the way authentication works.  It mearly exposes the PhpBB's existing cookie-based auth system via a json interface.
   * Only a handful of user properties are exposed in the interface.  If you need more you will want to fork the repo and add them.
   * It only handles auth and getting some basic details about the currently logged-in user.
-* It does not try to be an official extension. I did my best to to adhere to the [extension guidelines](https://www.phpbb.com/extensions/rules-and-policies/validation-policy/), but in the end there are some issues I couldn't avoid:
+* It does not try to be qualify for upload to the PhpBB extension database. I did my best to to adhere to the [extension guidelines](https://www.phpbb.com/extensions/rules-and-policies/validation-policy/), but in the end there are some issues I couldn't avoid:
   * _"15. login_forum_box() or login_box() is used for login."_ is obviously not a reasonable restriction for an JSON API.
   * _"For privacy reasons it is not allowed to send private information (including but not limited to posts, user information, etc.) to any remote website or remote server. Any extension that does send information to a remote website or remote server will be denied for this reason. Exceptions to this rule, although rare, will be handled on a case-by-case basis."_ 
   The extension doesn't phone home to a remote server somewhere, but it is giving user data to a requesting client due to the nature of being an API.  Probably could get an exception for this.
