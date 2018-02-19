@@ -44,7 +44,7 @@ Example client:
     * Command will look something like "php composer.phar install" and needs to be run from the directory with the composer.json file.
 
 ### Using the API
-The root path of the API will be:  https://<hostname><forum path>/app.php/restApiV1/  If you have url rewriting enabled (in General->Server Settings of the control panel) and working for your forum, the path can be shortened to https://<hostname><forum path>/restApiV1/
+The root path of the API will be:  https://\<hostname\>\<forum path\>/app.php/restApiV1/  If you have url rewriting enabled (in General->Server Settings of the control panel) and working for your forum, the path can be shortened to https://<hostname><forum path>/restApiV1/
 
 NOTE: Due to PhpBB's cookie based auth, you will need to handle cookies passed to and returned by the api.  You shouldn't directly store these.  Your client should act as a proxy for these cookies.  I recommend looking at the example client and reusing the code if you are working with PHP on the client side.
 
@@ -54,7 +54,7 @@ NOTE: Due to PhpBB's cookie based auth, you will need to handle cookies passed t
 
 method: POST
 
-url: <apiRoot>/login
+url: \<apiRoot\>/login
 
 Parameters:
 
@@ -77,7 +77,7 @@ Current cookies and the following form parameters in the POST body:
 
 method: POST
 
-url: <apiRoot>/logout
+url: \<apiRoot\>/logout
 
 parameters: Current cookies
 
@@ -92,7 +92,7 @@ User data json for anonymous user. (See current user API)
 
 method: GET
 
-url: <apiRoot>/users/me
+url: \<apiRoot\>/users/me
 
 parameters: Current cookies
 
