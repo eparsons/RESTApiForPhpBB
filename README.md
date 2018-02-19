@@ -17,10 +17,10 @@ Project is provided as-is.  It was built to support a particular website and wil
 * It is not a replacement for whatever PhpBB ultimately releases for their [REST API](https://wiki.phpbb.com/Proposed_REST_API).  It is just a workaround until PhpBB releases something that can allow for integrating with their auth system more cleanly.
 * It does not try to do more than was needed for the website I help with:
   * You will find that it doesn't protect against replay attacks or other things to be concerned about when creating an API.  It was originally designed to be accessed by a site that resides on the same box, so it currently checks that the remote host is localhost and that https is being used.  If you want to integrate the API with an off server client such as a mobile app, you will need to handle these issues yourself.
-  * It doesn't alter the way authentication works.  It mearly exposes the PhpBB's existing cookie-based auth system via a json interface.
+  * It doesn't alter the way authentication works.  It mearly exposes PhpBB's existing cookie-based auth system via a json interface.
   * Only a handful of user properties are exposed in the interface.  If you need more you will want to fork the repo and add them.
   * It only handles auth and getting some basic details about the currently logged-in user.
-* It does not try to be qualify for upload to the PhpBB extension database. I did my best to to adhere to the [extension guidelines](https://www.phpbb.com/extensions/rules-and-policies/validation-policy/), but in the end there are some issues I couldn't avoid:
+* It does not try to qualify for upload to the PhpBB extension database. I did my best to to adhere to the [extension guidelines](https://www.phpbb.com/extensions/rules-and-policies/validation-policy/), but in the end there are some issues I couldn't avoid:
   * _"15. login_forum_box() or login_box() is used for login."_ is obviously not a reasonable restriction for an JSON API.
   * _"For privacy reasons it is not allowed to send private information (including but not limited to posts, user information, etc.) to any remote website or remote server. Any extension that does send information to a remote website or remote server will be denied for this reason. Exceptions to this rule, although rare, will be handled on a case-by-case basis."_ 
   The extension doesn't phone home to a remote server somewhere, but it is giving user data to a requesting client due to the nature of being an API.  Probably could get an exception for this.
