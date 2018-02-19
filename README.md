@@ -44,7 +44,7 @@ Example client:
     * Command will look something like "php composer.phar install" and needs to be run from the directory with the composer.json file.
 
 ### Using the API
-The root path of the API will be:  https://\<hostname\>\<forum path\>/app.php/restApiV1/  If you have url rewriting enabled (in General->Server Settings of the control panel) and working for your forum, the path can be shortened to https://<hostname><forum path>/restApiV1/
+The root path of the API will be:  https://\<hostname\>\<forum path\>/app.php/restApiV1/  If you have url rewriting enabled (in General->Server Settings of the control panel) and working for your forum, the path can be shortened to https://\<hostname\>\<forum path\>/restApiV1/
 
 NOTE: Due to PhpBB's cookie based auth, you will need to handle cookies passed to and returned by the api.  You shouldn't directly store these.  Your client should act as a proxy for these cookies.  I recommend looking at the example client and reusing the code if you are working with PHP on the client side.
 
@@ -52,20 +52,11 @@ NOTE: Due to PhpBB's cookie based auth, you will need to handle cookies passed t
 
 **Request**
 
-method: POST
-
-url: \<apiRoot\>/login
-
-Parameters:
-
-Current cookies and the following form parameters in the POST body:
-
-'username' : (string) The user's name
-
-'password' : (string) The user's password
-
-'persistLogin' : (boolean) Flag indicating if inactivity should cause the user to be logged out.
-
+Request Property | Value
+--- | ---
+method | POST
+url | \<apiRoot\>/login
+Parameters | Current cookies and the following form parameters in the POST body:<ul><li>**'username'** : (string) The user's name</li><li>**'password'** : (string) The user's password</li><li>**'persistLogin'** : (boolean) Flag indicating if inactivity should cause the user to be logged out.</li></ul>
 
 **Response**
 
@@ -75,12 +66,11 @@ Current cookies and the following form parameters in the POST body:
 
 **Request**
 
-method: POST
-
-url: \<apiRoot\>/logout
-
-parameters: Current cookies
-
+Request Property | Value
+--- | ---
+method | POST
+url | \<apiRoot\>/logout
+parameters | Current cookies
 
 **Response**
 
@@ -90,12 +80,11 @@ User data json for anonymous user. (See current user API)
 
 **Request**
 
-method: GET
-
-url: \<apiRoot\>/users/me
-
-parameters: Current cookies
-
+Request Property | Value
+--- | ---
+method | GET
+url | \<apiRoot\>/users/me
+parameters | Current cookies
 
 **Resonse** 
 
