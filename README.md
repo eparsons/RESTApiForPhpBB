@@ -48,7 +48,7 @@ The root path of the API will be:  https://\<hostname\>\<forum path\>/app.php/re
 
 NOTE: Due to PhpBB's cookie based auth, you will need to handle cookies passed to and returned by the api.  You shouldn't directly store these.  Your client should act as a proxy for these cookies.  I recommend looking at the example client and reusing the code if you are working with PHP on the client side.
 
-#### Logging in
+### Logging in
 
 **Request**
 
@@ -60,7 +60,7 @@ Parameters | Current cookies and the following form parameters in the POST body:
 
 **Response**
 
-401 status code on auth failure, otherwise user data json for logged in user. (See current user API)
+401 status code on auth failure, otherwise user data json for logged in user. (See [current user API](#current-user))
 
 ### Logging out
 
@@ -74,7 +74,7 @@ parameters | Current cookies
 
 **Response**
 
-User data json for anonymous user. (See current user API)
+User data json for anonymous user. (See [current user API](#current-user))
 
 ### Current user
 
