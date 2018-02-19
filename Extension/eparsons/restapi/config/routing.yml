@@ -1,0 +1,17 @@
+eparsons_restapi_auth_login:
+    path: /restApiV1/login
+    defaults: { _controller: eparsons.restapi.controller.auth:login }
+
+eparsons_restapi_auth_logout:
+    path: /restApiV1/logout
+    defaults: { _controller: eparsons.restapi.controller.auth:logout }
+
+eparsons_restapi_users_whoAmI:
+    path: /restApiV1/users/me
+    defaults: { _controller: eparsons.restapi.controller.users:whoAmI }
+
+eparsons_restapi_users_user:
+    path: /restApiV1/users/{userId}
+    defaults: { _controller: eparsons.restapi.controller.users:user, userId: -1 }
+    requirements:
+        userId: \d+

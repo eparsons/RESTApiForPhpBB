@@ -1,0 +1,26 @@
+services:
+    eparsons.restapi.validation:
+        class: eparsons\restapi\Validation
+        arguments:
+            - '@request'
+    eparsons.restapi.controller.auth:
+        class: eparsons\restapi\controller\auth\Authentication
+        arguments:
+            - '@request'
+            - '@auth'
+            - '@user' 
+            - '@eparsons.restapi.validation'
+            - '@config'
+    eparsons.restapi.controller.users:
+        class: eparsons\restapi\controller\users\Users
+        arguments:
+            - '@user' 
+            - '@eparsons.restapi.validation'         
+    eparsons.restapi.listener:
+        class: eparsons\restapi\event\event_listener
+        arguments:
+            - '@request'
+            - '@user'
+            - '@config'
+        tags:
+            - { name: event.listener }

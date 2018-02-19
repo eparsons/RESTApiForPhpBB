@@ -1,0 +1,17 @@
+{
+    "name": "Example REST client for phpBB",
+    "type": "REST client",
+    "description": "Example REST client for interacting with the eparsons/restapi phpBB extension.",
+    "homepage": "https://github.com/eparsons/RestApiForPhpBB",
+    "version": "1.0.0",
+    "license": "MIT",
+    "authors": [{
+        "name": "Eric Parsons",
+        "role": "Developer"
+    }],
+    "require": {
+        "guzzlehttp/guzzle": "~6.0",
+        "php": ">=5.4.0"
+    }
+}
+
