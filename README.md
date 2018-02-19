@@ -1,5 +1,5 @@
 # RESTApiForPhpBB
-An unofficial REST API for PhpBB with example client.
+An unofficial REST API for [PhpBB](https://www.phpbb.com/) with example client.
 
 ### Licenses:
 * PhpBB extension: GPLv2
