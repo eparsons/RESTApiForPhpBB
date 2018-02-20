@@ -16,7 +16,7 @@ Project is provided as-is.  It was built to support a particular website and wil
 ### What this project does not intend to solve
 * It is not a replacement for whatever PhpBB ultimately releases for their [REST API](https://wiki.phpbb.com/Proposed_REST_API).  It is just a workaround until PhpBB releases something that can allow for integrating with their auth system more cleanly.
 * It does not try to do more than was needed for the website I help with:
-  * It is currently meant to be accessed via localhost:443, and so some security features that you find in some public apis may be missing.
+  * It is currently meant to be accessed via https from a client on the same server, and so some security features that you find in some public apis may be missing.
   * It doesn't alter the way authentication works.  It mearly exposes PhpBB's existing cookie-based auth system via a json interface.
 * It does not try to qualify for upload to the PhpBB extension database. I did my best to to adhere to the [extension guidelines](https://www.phpbb.com/extensions/rules-and-policies/validation-policy/), but in the end there are some issues I couldn't avoid such as _"15. login_forum_box() or login_box() is used for login."_ for obvious reasons.
   
