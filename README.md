@@ -10,7 +10,7 @@ Project is provided as-is.  It was built to support a particular website and wil
 
 ### What this project intended to solve
 * Single sign-on with PhpBB
-* Auth integration with sites not written in PHP.
+* Auth integration with sites not written in PHP. 
 * Avoid conflicts when PhpBB and the integrated site use different versions of Symfony components.
 
 ### What this project does not intend to solve
